@@ -2,10 +2,12 @@
   "name": "slug-generator-library",
   "version": "1.0.0",
   "description": "A small, production-quality TypeScript library that converts text into a URL-friendly slug.",
-  "main": "index.js",
+  "main": "./dist/index.js",
+  "type": "module",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "test": "jest"
+    "test": "tsc && node --experimental-vm-modules node_modules/jest/bin/jest.js"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +19,9 @@
     "typescript": "^5.9.3"
   },
   "dependencies": {
-    "transliteration": "^2.6.1"
+    "human-regex": "^2.2.0",
+    "magic-regexp": "^0.11.0",
+    "transliteration": "^2.6.1",
+    "ts-regex-builder": "^1.8.2"
   }
 }
